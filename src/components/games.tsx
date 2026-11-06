@@ -1,5 +1,9 @@
+"use client";
+import { useState } from "react";
 import { games } from "../../lib/database";
 import styles from "./games.module.css";
+
+const categories = ["Semua", "Strategi", "Party", "Keluarga", "Kooperatif"];
 
 const difficultyClass: Record<string, string> = {
   Mudah: styles.easy,
@@ -8,6 +12,13 @@ const difficultyClass: Record<string, string> = {
 };
 
 export default function Games() {
+  const [activeCategory, setActiveCategory] = useState("Semua");
+
+  const filteredGames =
+    activeCategory === "Semua"
+      ? games
+      : games.filter((game) => game.category === activeCategory);
+
   return (
     <section id="games" className={styles.games}>
       <div className={styles.container}>
@@ -20,8 +31,23 @@ export default function Games() {
           </p>
         </div>
 
-        <div className={styles.grid}>
-          {games.map((game) => (
+        <div className={styles.filters}>
+          {categories.map((category) => (
+            <button
+              key={category}
+              type="button"
+              className={`${styles.filterButton} ${
+                activeCategory === category ? styles.filterActive : ""
+              }`}
+              onClick={() => setActiveCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <div className={styles.grid} key={activeCategory}>
+          {filteredGames.map((game) => (
             <article key={game.id} className={styles.card}>
               <div className={styles.cardTop}>
                 <span className={styles.category}>{game.category}</span>

@@ -10,7 +10,7 @@
 
 .header {
   max-width: 640px;
-  margin: 0 auto 48px;
+  margin: 0 auto 32px;
   text-align: center;
 }
 
@@ -38,13 +38,56 @@
   font-size: 17px;
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filterButton {
+  padding: 10px 22px;
+  border: 2px solid #f0e2cf;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.filterButton:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filterActive,
+.filterActive:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--white);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card {
+  animation: cardIn 0.35s ease;
   display: flex;
   flex-direction: column;
   overflow: hidden;
