@@ -190,3 +190,52 @@
   color: #d9c7b4;
   font-size: 13px;
 }
+
+@media (max-width: 900px) {
+  .eventGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .events {
+    padding: 64px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .testimonialHeading {
+    margin: 56px 0 24px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events {
+    padding: 56px 16px;
+  }
+
+  .eventCard {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .eventIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .testimonialCard {
+    padding: 24px 20px;
+  }
+}

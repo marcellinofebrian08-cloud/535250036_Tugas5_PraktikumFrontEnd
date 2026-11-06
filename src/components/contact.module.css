@@ -125,3 +125,47 @@
   color: var(--white);
   transform: translateY(-3px);
 }
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 64px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 56px 16px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .infoCard {
+    padding: 20px;
+  }
+
+  .reserveCard {
+    padding: 32px 24px;
+  }
+
+  .reserveTitle {
+    font-size: 22px;
+  }
+
+  .waButton {
+    width: 100%;
+    text-align: center;
+  }
+}

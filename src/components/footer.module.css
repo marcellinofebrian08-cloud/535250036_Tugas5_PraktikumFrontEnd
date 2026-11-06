@@ -39,3 +39,17 @@
   font-size: 14px;
   text-align: center;
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 16px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+}
