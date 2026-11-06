@@ -1,0 +1,163 @@
+.menu {
+  padding: 96px 24px;
+  background: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 36px;
+}
+
+.subtitle {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.packageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.packageCard {
+  position: relative;
+  padding: 32px 28px;
+  border: 2px solid #f0e2cf;
+  border-radius: var(--radius);
+  background: var(--background);
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.packageCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.featured {
+  padding: 44px 28px;
+  border-color: var(--dark);
+  background: var(--dark);
+  color: var(--background);
+  box-shadow: var(--shadow);
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.packageName {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.featured .packageName {
+  color: var(--accent);
+}
+
+.price {
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.unit {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.featured .unit {
+  color: #d9c7b4;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.menuCard {
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.menuTitle {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed #f0e2cf;
+  font-size: 22px;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted #d9c7b4;
+}
+
+.menuPrice {
+  color: var(--primary);
+  font-weight: 700;
+}
