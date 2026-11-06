@@ -50,6 +50,7 @@
 }
 
 .link {
+  position: relative;
   display: block;
   padding: 8px 14px;
   border-radius: 8px;
@@ -59,7 +60,29 @@
   transition: color 0.2s, background 0.2s;
 }
 
+.link::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 2px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
 .link:hover {
   color: var(--accent);
   background: #ffffff14;
+}
+
+.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.active::after {
+  transform: scaleX(1);
 }
