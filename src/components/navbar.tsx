@@ -13,6 +13,12 @@ const menuItems = [
 
 export default function Navbar() {
   const [activeId, setActiveId] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (id: string) => {
+    setActiveId(id);
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,13 +52,25 @@ export default function Navbar() {
         <a
           href="#home"
           className={styles.logo}
-          onClick={() => setActiveId("home")}
+          onClick={() => handleClick("home")}
         >
           <span className={styles.logoIcon}>🎲</span>
           Meeple <span className={styles.logoAccent}>&amp;</span> Mug
         </a>
 
-        <ul className={styles.menu}>
+        <button
+          type="button"
+          className={`${styles.hamburger} ${isOpen ? styles.hamburgerOpen : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Tutup menu" : "Buka menu"}
+          aria-expanded={isOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`${styles.menu} ${isOpen ? styles.menuOpen : ""}`}>
           {menuItems.map((item) => (
             <li key={item.id}>
               <a
@@ -60,7 +78,7 @@ export default function Navbar() {
                 className={`${styles.link} ${
                   activeId === item.id ? styles.active : ""
                 }`}
-                onClick={() => setActiveId(item.id)}
+                onClick={() => handleClick(item.id)}
               >
                 {item.label}
               </a>
