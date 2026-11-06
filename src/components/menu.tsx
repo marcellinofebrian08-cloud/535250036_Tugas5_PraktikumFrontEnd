@@ -36,7 +36,7 @@ const menuGroups = [
     ],
   },
   {
-    title: "🍟 Camilan",
+    title: "🍟 Cemilan",
     items: [
       { name: "Kentang Goreng", price: "Rp20.000" },
       { name: "Roti Bakar Cokelat Keju", price: "Rp22.000" },
@@ -55,8 +55,8 @@ export default function Menu() {
           <span className={styles.label}>Menu &amp; Harga</span>
           <h2 className={styles.title}>Bayar main, sekalian ngopi</h2>
           <p className={styles.subtitle}>
-            Pilih paket main yang pas, lalu temani dengan kopi dan camilan
-            dari dapur kami.
+            Pilih paket main yang pas, lalu temani dengan kopi dan camilan dari
+            dapur kami.
           </p>
         </div>
 

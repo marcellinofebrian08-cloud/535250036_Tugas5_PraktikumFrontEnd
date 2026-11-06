@@ -1,0 +1,41 @@
+.footer {
+  padding: 48px 24px 24px;
+  background: var(--dark);
+  color: var(--background);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #ffffff1f;
+  text-align: center;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo:hover {
+  color: var(--white);
+}
+
+.logoAccent {
+  color: var(--accent);
+}
+
+.tagline {
+  margin: 8px 0 0;
+  color: #d9c7b4;
+  font-size: 15px;
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  color: #b5a392;
+  font-size: 14px;
+  text-align: center;
+}

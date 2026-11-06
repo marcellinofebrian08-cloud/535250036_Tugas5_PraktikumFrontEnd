@@ -4,6 +4,8 @@ import About from "../components/about";
 import Games from "../components/games";
 import Events from "../components/events";
 import Menu from "../components/menu";
+import Contact from "../components/contact";
+import Footer from "../components/footer";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -16,7 +18,9 @@ export default function Home() {
         <Games />
         <Events />
         <Menu />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
