@@ -14,7 +14,7 @@ const slides: Slide[] = [
   {
     title: "Lempar Dadu, Seruput Kopi",
     subtitle:
-      "Ratusan board game siap dimainkan sambil ditemani kopi hangat dan camilan favoritmu.",
+      "Ratusan board game siap dimainkan sambil ditemani kopi hangat dan cemilan favoritmu.",
     imageUrl: "/images/banner_01.jpg",
     ctaLabel: "Lihat Koleksi Game",
     ctaLink: "#games",
@@ -49,23 +49,27 @@ const HeroSection = () => {
         prevLabel="Sebelumnya"
         nextLabel="Berikutnya"
       >
-        {slides.map((slide) => (
-          <Carousel.Item key={slide.title}>
-            <div
-              className={styles.slide}
-              style={{ backgroundImage: `url(${slide.imageUrl})` }}
-            >
-              <div className={styles.overlay}></div>
-            </div>
-            <Carousel.Caption className={styles.caption}>
-              <h1 className={styles.title}>{slide.title}</h1>
-              <p className={styles.subtitle}>{slide.subtitle}</p>
-              <a href={slide.ctaLink} className={styles.ctaButton}>
-                {slide.ctaLabel}
-              </a>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
+        {slides.map((slide, index) => {
+          const TitleTag = index === 0 ? "h1" : "h2";
+
+          return (
+            <Carousel.Item key={slide.title}>
+              <div
+                className={styles.slide}
+                style={{ backgroundImage: `url(${slide.imageUrl})` }}
+              >
+                <div className={styles.overlay}></div>
+              </div>
+              <Carousel.Caption className={styles.caption}>
+                <TitleTag className={styles.title}>{slide.title}</TitleTag>
+                <p className={styles.subtitle}>{slide.subtitle}</p>
+                <a href={slide.ctaLink} className={styles.ctaButton}>
+                  {slide.ctaLabel}
+                </a>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
+        })}
       </Carousel>
     </section>
   );

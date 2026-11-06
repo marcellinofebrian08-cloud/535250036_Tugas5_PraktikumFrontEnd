@@ -55,7 +55,7 @@ export default function Menu() {
           <span className={styles.label}>Menu &amp; Harga</span>
           <h2 className={styles.title}>Bayar main, sekalian ngopi</h2>
           <p className={styles.subtitle}>
-            Pilih paket main yang pas, lalu temani dengan kopi dan camilan dari
+            Pilih paket main yang pas, lalu temani dengan kopi dan cemilan dari
             dapur kami.
           </p>
         </div>

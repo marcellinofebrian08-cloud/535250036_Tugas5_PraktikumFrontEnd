@@ -3,7 +3,7 @@ import styles from "./about.module.css";
 const features = [
   { icon: "⏱️", text: "Bayar per jam, main sepuasnya" },
   { icon: "🧑‍🏫", text: "Game master siap ngajarin dari nol" },
-  { icon: "☕", text: "Kopi lokal dan camilan rumahan" },
+  { icon: "☕", text: "Kopi lokal dan cemilan rumahan" },
   { icon: "🏆", text: "Event dan turnamen rutin tiap bulan" },
 ];
 
