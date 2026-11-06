@@ -1,4 +1,3 @@
-// data website disimpan langsung di sini, nggak perlu sqlite karena isinya statis
 export interface Game {
   id: number;
   name: string;
@@ -8,5 +7,4 @@ export interface Game {
   difficulty: string;
 }
 
-// diisi nanti waktu bikin section koleksi game
 export const games: Game[] = [];
